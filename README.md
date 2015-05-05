@@ -42,11 +42,11 @@ A  brilliant attempt to that is mysql-shadow by @perak (https://github.com/perak
 
 The bad news is that the developer will not continue maintaining it, but what is done is enough to work with simple scenarios where you don't have complex triggers that update other tables or stuff like that.
 
-For a full featured synchronization you can use SymmetricsDS (http://www.symmetricds.org), a very well tested database replicator. This involves setting up a new java server, of course, but is by far the best wait to be sure that you will be able to convert your Mongo database in a simple repository of your MySql, PostgreSQL, SQL Server , Informix or anything. I have to check it myself yet.
+For a full featured synchronization you can use SymmetricsDS (http://www.symmetricds.org), a very well tested database replicator. This involves setting up a new java server, of course, but is by far the best way to be sure that you will be able to convert your Mongo database in a simple repository of your real MySql, PostgreSQL, SQL Server , Informix database. I have to check it myself yet.
 
 For now MySQL Shadow seems like a good enough solution.
 
-One advantage of this approach is that you can still use all standard Meteor features, meteor deployment and so on. You don´t have to do anything but set up the synch mechanism.
+One advantage of this approach is that you can still use all standard Meteor features, packages, meteor deployment and so on. You don´t have to do anything but set up the synch mechanism, and you are not breaking anything.
 
 Also, if someday the Meteor team uses some of the dollars raised in SQL integration, your app is more likely to work as is.
 
