@@ -44,7 +44,7 @@ The bad news is that the developer will not continue maintaining it, but what is
 
 For a full featured synchronization you can use SymmetricsDS (http://www.symmetricds.org), a very well tested database replicator. This involves setting up a new java server, of course, but is by far the best wait to be sure that you will be able to convert your Mongo database in a simple repository of your MySql, PostgreSQL, SQL Server , Informix or anything. I have to check it myself yet.
 
-For now MySQl Shadows seems like a good enough solution.
+For now MySQL Shadow seems like a good enough solution.
 
 One advantage of this approach is that you can still use all standard Meteor features, meteor deployment and so on. You don´t have to do anything but set up the synch mechanism.
 
