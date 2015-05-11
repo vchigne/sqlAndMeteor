@@ -1,5 +1,5 @@
 # sqlAndMeteor
-On the diverse ways to use SQL on Meteor - As 05-05-2015
+On the diverse ways to use SQL on Meteor - As 11-05-2015
 
 If you are like me, you love Meteor but hate Mongo.
 In Meteor's Trello Roadmap (https://trello.com/b/hjBDflxp/meteor-roadmap), the most voted feature is SQL Support, either PostgreSQL or MySQL.
@@ -22,6 +22,25 @@ Since there is no date for that in Meteor, here I summarize the partial solution
       return alasql("select item.name, sales.ordered as sumaVentas from ? sales, ? items
           where items.Id=sales.itemId",[customerSalesHistory,items]);
     }
+Update:  alaSQL has just added support for Meteor Mongo Collections:
+
+AlaSQL and Meteor Mongo collections
+
+Now you can use Meteor collections as agruments. To do it simply store alasql.min.js to the client/lib directory and then apply SQL to Meteor Collections:
+
+    Template.body.helpers({
+       tasks: function () {
+         return alasql('SELECT * FROM ?',[Tasks]);
+       }
+    });
+Or you can use with find() options with special METEOR() from-function:
+
+    return alasql('SELECT * FROM ?',[Tasks]);
+    return alasql('SELECT * FROM METEOR(?)',[Tasks]);
+    return alasql('SELECT * FROM METEOR(?,?)',[Tasks,{text:"Hello world!"}]);
+    return alasql('SELECT * FROM METEOR(?,{text:"Hello world!"})',[Tasks]);
+
+Strongly reccomended.
 
 <h2>2.- Experiment with direct SQL support.</h2>
 Some packages try to replace Mongo (and minimongo) with MySql or PostgreSQL. 
