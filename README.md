@@ -14,9 +14,6 @@ Since there is no date for that in Meteor, here I summarize the partial solution
   The new player in town is alaSQL, which is actively developed by @agershun (https://github.com/agershun/alasql).
   The SqlLike advantage is that it only has 10k. AlaSQL, is a lot more powerful, of course, but for using SQL to replace  mongo sintax in unions and aggregations, SqlLike is OK. 
   
-  You can install alaSQL with  
-  
-      meteor add agershun:alasql
   
   With both of them you can do something like this in your helper:
     
@@ -28,6 +25,10 @@ Since there is no date for that in Meteor, here I summarize the partial solution
     }
 Update:  alaSQL has just added support for Meteor Mongo Collections:
 
+You can install alaSQL with  
+  
+      meteor add agershun:alasql
+  
 AlaSQL and Meteor Mongo collections
 
 Now you can use Meteor collections as agruments. To do it simply store alasql.min.js to the client/lib directory and then apply SQL to Meteor Collections:
