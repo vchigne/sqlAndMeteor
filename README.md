@@ -1,5 +1,5 @@
 # sqlAndMeteor
-On the diverse ways to use SQL on Meteor - As 11-05-2015
+On the diverse ways to use SQL on Meteor - As 16-05-2015
 
 If you are like me, you love Meteor but hate Mongo.
 In Meteor's Trello Roadmap (https://trello.com/b/hjBDflxp/meteor-roadmap), the most voted feature is SQL Support, either PostgreSQL or MySQL.
@@ -13,6 +13,10 @@ Since there is no date for that in Meteor, here I summarize the partial solution
   The simplest one is a old (2010) utility, SqlLike (http://www.thomasfrank.se/sqlike.html). 
   The new player in town is alaSQL, which is actively developed by @agershun (https://github.com/agershun/alasql).
   The SqlLike advantage is that it only has 10k. AlaSQL, is a lot more powerful, of course, but for using SQL to replace  mongo sintax in unions and aggregations, SqlLike is OK. 
+  
+  You can install alaSQL with  
+  
+      meteor add agershun:alasql
   
   With both of them you can do something like this in your helper:
     
